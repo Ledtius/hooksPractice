@@ -1,15 +1,15 @@
+import { useState } from "react";
 import Box from "./components/Box.jsx";
+import CountProvider from "./components/CountProvider.jsx";
+import Count from "./components/Count.jsx";
 
 function App() {
+  const [prove, setProve] = useState("Proved");
   return (
     <>
-      <Box>
-        <button className="cursor-pointer">Click me</button>
-      </Box>
-
-      <Box>
-        <p>Hello word</p>
-      </Box>
+      <CountProvider>
+        <Count />
+      </CountProvider>
     </>
   );
 }
