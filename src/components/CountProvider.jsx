@@ -5,12 +5,18 @@ const CountProvider = ({ children }) => {
   const [count, setCount] = useState(0);
 
   function increment() {
-    setCount(count + 1);
+    setCount((prev) => prev + 1);
+  }
+
+  function decrement() {
+    setCount((prev) => prev - 1);
   }
   return (
     <>
       <div>
-        <CountContext.Provider value={{ count, setCount, increment }}>
+        <CountContext.Provider
+          value={{ count, setCount, increment, decrement }}
+        >
           <h1>CountProvider</h1>
           {children}
         </CountContext.Provider>

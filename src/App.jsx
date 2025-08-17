@@ -1,18 +1,15 @@
-import Layout from "./components/Layout.jsx";
+import Count from "./components/Count.jsx";
+import CountProvider from "./components/CountProvider.jsx";
+
+import DoubleCount from "./components/DoubleCount.jsx";
 
 function App() {
   return (
     <>
-      <Layout>
-        <header>Header</header>
-        <main>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente,
-          atque numquam repellendus voluptate harum velit delectus? Modi
-          incidunt non quibusdam, accusamus eaque laboriosam error voluptatum
-          deleniti? Explicabo architecto eos harum!
-        </main>
-        <footer>Footer</footer>
-      </Layout>
+      <CountProvider>
+        <Count />
+        <DoubleCount />
+      </CountProvider>
     </>
   );
 }
