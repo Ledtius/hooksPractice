@@ -1,15 +1,19 @@
-import { useState } from "react";
-import Box from "./components/Box.jsx";
-import CountProvider from "./components/CountProvider.jsx";
-import Count from "./components/Count.jsx";
+import Card from "./components/Card.jsx";
 
 function App() {
-  const [prove, setProve] = useState("Proved");
   return (
     <>
-      <CountProvider>
-        <Count />
-      </CountProvider>
+      <Card title={"Title of the card"}>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ad saepe
+          asperiores dolorum necessitatibus debitis praesentium reiciendis
+          harum, veritatis, dolor obcaecati tempore quia molestias dicta dolores
+          minus ducimus cumque similique.
+        </p>
+      </Card>
+      <br />
+
+      <Card children={"Other description"} title={"Other title"} />
     </>
   );
 }
