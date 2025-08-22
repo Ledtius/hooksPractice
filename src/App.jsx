@@ -1,18 +1,15 @@
-import ThemeProvider from "./components/ThemeProvider.jsx";
+import ScrollLogger from "./components/ScrollLogger.jsx";
 
-import ThemeButton from "./components/ThemeButton.jsx";
+import KeyLogger from "./components/KeyLogger.jsx";
 
-import Box from "./components/Box.jsx";
+import Example from "./components/Example.jsx";
 
 function App() {
   return (
     <>
-      <ThemeProvider>
-        <ThemeButton />
-        <Box>
-          <h1>hola</h1>
-        </Box>
-      </ThemeProvider>
+
+      <KeyLogger />
+      {/* <Example /> */}
     </>
   );
 }
