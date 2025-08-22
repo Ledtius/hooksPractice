@@ -8,10 +8,13 @@ import Timer from "./components/Timer.jsx";
 
 import ShowSeconds from "./components/ShowSeconds.jsx";
 
+import MouseMove from "./components/MouseMove.jsx";
+
 function App() {
   return (
     <>
-      <ShowSeconds />
+      <MouseMove />
+      {/* <ShowSeconds /> */}
       {/* <Timer /> */}
       {/* <KeyLogger /> */}
       {/* <Example /> */}
