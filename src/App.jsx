@@ -10,10 +10,13 @@ import ShowSeconds from "./components/ShowSeconds.jsx";
 
 import MouseMove from "./components/MouseMove.jsx";
 
+import Chat from "./components/Chat.jsx";
+
 function App() {
   return (
     <>
-      <MouseMove />
+      <Chat />
+      {/* <MouseMove /> */}
       {/* <ShowSeconds /> */}
       {/* <Timer /> */}
       {/* <KeyLogger /> */}

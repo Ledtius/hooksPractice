@@ -4,10 +4,10 @@ const MouseMove = () => {
     const handlerMouse = (e) => {
       console.log(e.clientX, e.clientY);
     };
-    addEventListener("mousemove", handlerMouse);
+    window.addEventListener("mousemove", handlerMouse);
 
     return () => {
-      removeEventListener("mousemove", handlerMouse);
+      window.removeEventListener("mousemove", handlerMouse);
     };
   }, []);
 
