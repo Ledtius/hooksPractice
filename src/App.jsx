@@ -12,10 +12,13 @@ import MouseMove from "./components/MouseMove.jsx";
 
 import Chat from "./components/Chat.jsx";
 
+import ProveRef from "./components/ProveRef.jsx";
+
 function App() {
   return (
     <>
-      <Chat />
+      <ProveRef />
+      {/* <Chat /> */}
       {/* <MouseMove /> */}
       {/* <ShowSeconds /> */}
       {/* <Timer /> */}
