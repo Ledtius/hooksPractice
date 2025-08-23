@@ -10,9 +10,29 @@ const ProveRef = () => {
     // setNumber((n) => n + 1);
     ref.current++;
     console.log(ref.current);
-    console.log();
     ref2.current.style.borderColor = "red";
   };
+
+  useEffect(() => {
+    const handleClickWindow = (e) => {
+      console.log("click");
+      ref2.current.style.borderColor = "";
+    };
+
+    window.addEventListener("click", handleClickWindow);
+
+    return () => {
+      window.removeEventListener("click", handleClickWindow);
+    };
+  }, []);
+
+  const handleBoxClick = (e) => {
+    e.stopPropagation();
+    ref2.current.style.borderColor = "red";
+
+    console.log("Click protected");
+  };
+
   useEffect(() => {
     console.log("First render");
     console.log(number);
@@ -24,7 +44,7 @@ const ProveRef = () => {
   });
   return (
     <>
-      <button className="p-2 bg-neutral-200 border-1" onClick={handleCLick}>
+      <button className="p-2 bg-neutral-200 border-1" onClick={handleBoxClick}>
         Click
       </button>
       <input className="border-1" ref={ref2} type="text" />
