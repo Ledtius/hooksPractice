@@ -14,10 +14,22 @@ import Chat from "./components/Chat.jsx";
 
 import ProveRef from "./components/ProveRef.jsx";
 
+import Parent from "./components/Parent.jsx";
+
+import { Card2 } from "./components/Card2.jsx";
+
+import Btn from "./components/Btn.jsx";
+
 function App() {
   return (
     <>
-      <ProveRef />
+      <Parent>
+        <Card2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quos natus delectus cum id amet, saepe aspernatur neque, adipisci modi deleniti quasi, error expedita enim accusamus nemo. Praesentium, voluptatibus velit.</p>
+          <Btn />
+        </Card2>
+      </Parent>
+      {/* <ProveRef /> */}
       {/* <Chat /> */}
       {/* <MouseMove /> */}
       {/* <ShowSeconds /> */}
