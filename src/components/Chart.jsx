@@ -1,26 +1,51 @@
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Legend } from "recharts";
+import {
+  LineChart,
+  Line,
+  CartesianGrid,
+  XAxis,
+  YAxis,
+  Legend,
+  Tooltip,
+} from "recharts";
+
 const data = [
-  { month: "January", sales: 400, expenses: 240 },
-  { month: "February", sales: 300, expenses: 139 },
-  { month: "March", sales: 200, expenses: 980 },
-  { month: "April", sales: 278, expenses: 390 },
-  { month: "May", sales: 189, expenses: 480 },
+  { month: "Jan", active: 120, newUsers: 50 },
+  { month: "Feb", active: 200, newUsers: 80 },
+  { month: "Mar", active: 150, newUsers: 40 },
+  { month: "Apr", active: 300, newUsers: 120 },
+  { month: "May", active: 250, newUsers: 90 },
 ];
 
 const Chart = () => {
   return (
     <>
-      {/* <LineChart width={600} height={300} data={data}>
-        <Line dataKey="pv" />
-      </LineChart> */}
-
-      <LineChart width={600} height={300} data={data}>
-        <CartesianGrid />
-        <Legend/>
-        <Line dataKey="sales" stroke="#FF00FF" strokeDasharray="3 3" />
-        <Line dataKey="expenses" stroke="red" />
+      <LineChart
+        width={600}
+        height={300}
+        data={data}
+        margin={{ top: 5, right: 20, bottom: 5, left: 10 }}
+      >
+        <CartesianGrid stroke="#aaa" strokeDasharray="5 5" />
         <XAxis dataKey="month" />
-        <YAxis />
+        <YAxis
+          width="auto"
+          label={{ value: "New users", position: "insideLeft", angle: -90 }}
+        />
+        <Line
+          dataKey="active"
+          stroke="blue"
+          type="monotone"
+          strokeWidth={3}
+          name="Active users"
+        />
+        <Line dataKey="newUsers" stroke="green" />
+        <Legend
+          layout="horizontal"
+          align="center"
+          verticalAlign="bottom"
+          iconType="circle"
+        />
+        <Tooltip />
       </LineChart>
     </>
   );

@@ -12,6 +12,7 @@ function Timer() {
     return () => clearInterval(interval);
   }, []); // se ejecuta solo una vez
 
+  /* Coment */
   return <h1>Time: {seconds}</h1>;
 }
 
